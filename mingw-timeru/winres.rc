@@ -1,0 +1,78 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include <windows.h>
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FORMVIEW DIALOGEX 0, 0, 185, 162
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "TIMER"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,90,46
+    EDITTEXT        IDC_TITLE,14,16,73,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HOUR,14,33,22,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINUTE,39,33,22,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SECONDS,64,33,22,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Check1",IDC_ALARM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,39,12,9
+    LTEXT           "ALARM",IDC_STATIC,121,39,39,11
+    PUSHBUTTON      "Button1",IDC_RUN,102,7,76,29
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,58,171,67
+    PUSHBUTTON      "ADD",IDC_ADD,80,129,46,15
+    PUSHBUTTON      "DELETE",IDC_DELETE,132,129,46,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU2 MENU
+BEGIN
+    POPUP "OPTIONS"
+    BEGIN
+        MENUITEM "TITLE COLOR...",              ID_TITLECOLOR
+        MENUITEM "TIME COLOR...",               ID_TIMECOLOR
+        MENUITEM "BACKGROUND...",               ID_BACKGROUND
+        MENUITEM "ALARM...",                    ID_ALARM
+        MENUITEM "DEFAULTS",                    ID_OPTIONS_DEFAULTS
+        MENUITEM "SHUTDOWN",                    IDSHUTDOWN, CHECKED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+//IDI_ICON3               ICON                    "ico.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "S",            ID_ALTS,                VIRTKEY, ALT, NOINVERT
+    "T",            ID_ALTT,                VIRTKEY, ALT, NOINVERT
+END
+
