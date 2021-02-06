@@ -1,0 +1,27 @@
+Commands:
+
+ar - create a static library from object files
+	ar rcf <shared library name> <object file/s>
+	(shared library name must be prefixed with "lib")
+
+to create the static libary:
+	use -c option in g++ to create an object file
+
+to create the shared libary:
+	use -fpic option in g++ 
+
+
+ldd 	- list the dependen
+nm  	- show symbol names in the shared library
+c++filt - decodes mangled c++ names 
+
+notes:
+program must locate the shared library in LD_LIBRARY_PATH, otherwise we may:
+Manually set the LD_LIBRARY_PATH to include the path to a library
+or 
+use the env command to set the LD_LIBRARY_PATH
+
+
+
+
+
