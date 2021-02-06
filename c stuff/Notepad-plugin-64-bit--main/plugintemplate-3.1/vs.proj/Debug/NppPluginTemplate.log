@@ -1,0 +1,7 @@
+﻿  GoToLineDlg.cpp
+  StaticDialog.cpp
+  NppPluginDemo.cpp
+  PluginDefinition.cpp
+  Generating Code...
+     Creating library D:\Downloads\np\plugintemplate-3.1\vs.proj\Debug\NppPluginTemplate.lib and object D:\Downloads\np\plugintemplate-3.1\vs.proj\Debug\NppPluginTemplate.exp
+  NppPluginTemplate.vcxproj -> D:\Downloads\np\plugintemplate-3.1\vs.proj\Debug\NppPluginTemplate.dll
