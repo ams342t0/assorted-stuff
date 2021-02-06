@@ -1,0 +1,86 @@
+#maintab
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width=100%;
+}
+
+#boxpid
+{
+	border-radius:5px;
+	font-size:16px;
+	font-color:#000000;
+	font-weight:bold;
+	padding:5px 5px 5px 5px;
+}
+
+#boxdiv
+{
+	border-radius:5px;
+	background-color:#A3A5FB;
+	position:absolute;
+	visibility:hidden;
+	padding:5px 5px 5px 5px;
+}
+
+#gradebox
+{
+	font-size:16px;
+	border-radius:5px;
+	background-color:#EDFE8C;
+	position:absolute;
+	visibility:hidden;
+	padding:5px 5px 5px 5px;
+}
+
+#details
+{
+	border-radius:5px;
+	background-color:#C0C0FF;
+	position:absolute;
+	visibility:hidden;
+	padding:5px 5px 5px 5px;
+	font-family:calibri;
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+#maintable
+{
+	font-family:calibri;
+	font-size:18px;
+	color:#ffffff;
+	border-collapse:collapse;
+	border-spacing:10px;
+}
+
+p.y
+{
+	color:#ff0000;
+}
+
+body
+{
+	font-family:calibri;
+	font-color:#ffffff;
+	background-color:#000000
+}
+
+#divmainbar
+{
+	position:fixed;
+	background-color:#8C7DFF;
+	width:100%;
+	top:0px;
+	left:0px;
+}
+
+#divmt
+{
+	scrollbar:true;
+	position:absolute;
+	top:100px;
+	width:100%;
+}

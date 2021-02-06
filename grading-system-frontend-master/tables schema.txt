@@ -1,0 +1,256 @@
+-- Table structure for table `areas`
+
+CREATE TABLE `areas` (
+  `AREAID` int(11) DEFAULT NULL,
+  `AREA` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Table structure for table `bankaccounts`
+--
+CREATE TABLE `bankaccounts` (
+  `ACCOUNTID` int(11) DEFAULT NULL,
+  `BANK` varchar(30) DEFAULT NULL,
+  `ACCOUNTNUMBER` varchar(20) DEFAULT NULL,
+  `HOWTOPAYTEXT` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `centers`
+--
+CREATE TABLE `centers` (
+  `CENTERID` int(11) DEFAULT NULL,
+  `CENTERNAME` varchar(50) DEFAULT NULL,
+  `CENTERCODE` varchar(5) DEFAULT NULL,
+  `CITY` varchar(255) DEFAULT NULL,
+  `REGION` int(11) DEFAULT NULL,
+  `OFFICEADDRESS` varchar(255) DEFAULT NULL,
+  `COORDINATOR` varchar(255) DEFAULT NULL,
+  `OFFICENUMBER` varchar(255) DEFAULT NULL,
+  `ACCOUNT` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `classes`
+--
+CREATE TABLE `classes` (
+  `CLASSID` int(11) DEFAULT NULL,
+  `CLASSNAME` varchar(25) DEFAULT NULL,
+  `SCHEDULE` int(11) DEFAULT NULL,
+  `PCOUNT` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `companions`
+--
+CREATE TABLE `companions` (
+  `compid` int(11) DEFAULT NULL,
+  `studid` int(11) DEFAULT NULL,
+  `fullname` varchar(75) DEFAULT NULL,
+  `sex` varchar(15) DEFAULT NULL,
+  `shirtsizes` varchar(50) DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `relation` varchar(25) DEFAULT NULL,
+  `room` varchar(50) DEFAULT NULL,
+  `center` varchar(75) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `grades`
+--
+CREATE TABLE `grades` (
+  `STUDID` int(11) DEFAULT NULL,
+  `ITEMID` int(11) DEFAULT NULL,
+  `GRADE` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `items`
+--
+CREATE TABLE `items` (
+  `ITEMID` int(11) DEFAULT NULL,
+  `ITEM` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `levels`
+--
+CREATE TABLE `levels` (
+  `LEVELID` int(11) DEFAULT NULL,
+  `LEVELTEXT` varchar(25) DEFAULT NULL,
+  `LEVELPREFIX` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `refid`
+--
+CREATE TABLE `refid` (
+  `ID` int(11) DEFAULT NULL,
+  `fullname` varchar(75) DEFAULT NULL,
+  `sex` int(11) DEFAULT NULL,
+  `studid` int(11) DEFAULT NULL,
+  `relation` varchar(50) DEFAULT NULL,
+  `contactnum` varchar(50) DEFAULT NULL,
+  `amountpaid` double DEFAULT NULL,
+  `shirtsize` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Table structure for table `regions`
+--
+CREATE TABLE `regions` (
+  `REGIONID` int(11) DEFAULT NULL,
+  `REGIONSHORT` varchar(255) DEFAULT NULL,
+  `REGIONLONG` varchar(255) DEFAULT NULL,
+  `REGIONCENTER` varchar(255) DEFAULT NULL,
+  `AREA` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `religions`
+--
+CREATE TABLE `religions` (
+  `RELIGIONID` int(11) DEFAULT NULL,
+  `Religion` varchar(255) DEFAULT NULL,
+  `Vegetarian` int(11) DEFAULT NULL,
+  `NoPork` int(11) DEFAULT NULL,
+  `NoMeat` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Table structure for table `rooms`
+--
+CREATE TABLE `rooms` (
+  `ROOMID` int(11) DEFAULT NULL,
+  `ROOMNAME` varchar(40) DEFAULT NULL,
+  `SCHEDULE` int(11) DEFAULT NULL,
+  `SEX` int(11) DEFAULT NULL,
+  `OCCUPANTS` int(11) DEFAULT NULL,
+  `MAXCOUNT` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `schedules`
+--
+CREATE TABLE `schedules` (
+  `SCHEDULEID` int(11) DEFAULT NULL,
+  `QUICKDESCRIPTION` varchar(255) DEFAULT NULL,
+  `VENUE` varchar(255) DEFAULT NULL,
+  `CITY` varchar(255) DEFAULT NULL,
+  `SCHEDULE` varchar(255) DEFAULT NULL,
+  `REGSTART` datetime DEFAULT NULL,
+  `REGEND` datetime DEFAULT NULL,
+  `DISCOUNTDUE` datetime DEFAULT NULL,
+  `REGFEE` double DEFAULT NULL,
+  `REGFEEWORDS` varchar(255) DEFAULT NULL,
+  `SCOPE_LEVELS` varchar(25) DEFAULT NULL,
+  `SCOPE_AREAS` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `schooltypes`
+--
+CREATE TABLE `schooltypes` (
+  `STID` int(11) DEFAULT NULL,
+  `TYPE` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `sexes`
+--
+CREATE TABLE `sexes` (
+  `SEXID` int(11) DEFAULT NULL,
+  `SEX` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `students`
+--
+CREATE TABLE `students` (
+  `STUDID` int(11) DEFAULT NULL,
+  `IDNUMBER` varchar(15) DEFAULT NULL,
+  `STUDENTCODE` int(11) DEFAULT NULL,
+  `FULLNAME` varchar(75) DEFAULT NULL,
+  `CHINESENAME` varchar(10) DEFAULT NULL,
+  `SEX` int(11) DEFAULT NULL,
+  `CITIZENSHIP` varchar(25) DEFAULT NULL,
+  `RELIGION` varchar(25) DEFAULT NULL,
+  `BIRTHDATE` varchar(25) DEFAULT NULL,
+  `BIRTHPLACE` varchar(50) DEFAULT NULL,
+  `iLEVEL` int(11) DEFAULT NULL,
+  `SCHOOL` varchar(255) DEFAULT NULL,
+  `CENTER` int(11) DEFAULT NULL,
+  `SHIRTSIZE` varchar(15) DEFAULT NULL,
+  `SCHEDULE` int(11) DEFAULT NULL,
+  `QSCORE` double DEFAULT NULL,
+  `S_CONTACTNUMBER` varchar(50) DEFAULT NULL,
+  `S_CELPHONENUMBER` varchar(50) DEFAULT NULL,
+  `S_EMAIL` varchar(255) DEFAULT NULL,
+  `IS_NOTED` int(11) DEFAULT NULL,
+  `IS_REGISTERED` int(11) DEFAULT NULL,
+  `IS_QUALIFIED` int(11) DEFAULT NULL,
+  `IS_EMAILED` int(11) DEFAULT NULL,
+  `HASPICTURE` int(11) DEFAULT NULL,
+  `HAS_ID` int(11) DEFAULT NULL,
+  `DEPSLIP` int(11) DEFAULT NULL,
+  `ROOM` int(11) DEFAULT NULL,
+  `CLASS` int(11) DEFAULT NULL,
+  `PROFILESCAN` varchar(128) DEFAULT NULL,
+  `SCHOOLTYPE` int(11) DEFAULT NULL,
+  `COMPANIONS` int(11) DEFAULT NULL,
+  `CONTACTPERSON` varchar(75) DEFAULT NULL,
+  `CONTACTNUMBER` varchar(75) DEFAULT NULL,
+  `CONTACTADDRESS` varchar(100) DEFAULT NULL,
+  `EMAIL` varchar(30) DEFAULT NULL,
+  `REMARKS` varchar(255) DEFAULT NULL,
+  `QUIZ` double DEFAULT NULL,
+  `QUIZCOUNT` int(11) DEFAULT NULL,
+  `DEPORTMENT` double DEFAULT NULL,
+  `ASSIGNMENT` double DEFAULT NULL,
+  `FINALEXAM` double DEFAULT NULL,
+  `FECOUNT` int(11) DEFAULT NULL,
+  `FINALGRADE` double DEFAULT NULL,
+  `RESULT` varchar(2) DEFAULT NULL,
+  `DEPSLIPSCAN` varchar(255) DEFAULT NULL,
+  `AMOUNTPAID` double DEFAULT NULL,
+  `TS` varchar(25) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Table structure for table `studfiles`
+--
+CREATE TABLE `studfiles` (
+  `STUDID` int(11) DEFAULT NULL,
+  `FILENAME` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
